@@ -1,0 +1,8 @@
+title: Main
+actions:
+- !writeStatus: {status: 'Modifying registry'}
+- !task: {path: 'Tasks\registry.yml'}
+- !writeStatus: {status: 'Removing APPX packages'}
+- !task: {path: 'Tasks\appx.yml'}
+- !writeStatus: {status: 'Enabling WSL and Virtual Machine Platform'}
+- !task: {path: 'Tasks\unix.yml'}

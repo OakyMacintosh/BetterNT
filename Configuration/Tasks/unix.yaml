@@ -1,0 +1,10 @@
+title: Unix
+actions:
+    - !writeStatus: {status: 'Enabling WSL and Virtual Machine Platform'}
+    - !command: {command: '   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart'}
+    - !command: {command: '   dism.exe /online /enable-feature /featurename:Windows-Subsystem-Linux /all /norestart'}
+    # install scoop via powershell
+    - !writeStatus: {status: 'Installing Scoop'}
+    - !command: {command: 'powershell -Command "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"'}
+    - !command: {command: 'powershell -Command "iwr get.scoop.sh -useb | iex"'}
+    - !command: {command: 'scoop install git archwsl gcc python'}

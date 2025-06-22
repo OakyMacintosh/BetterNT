@@ -1,0 +1,34 @@
+title: APPX Removal
+actions:
+    # Remove Microsoft Store (APPX) apps
+    - !appx: {name: '*disney*', type: family}
+    - !appx: {name: '*PowerAutomate*', type: family}
+    - !appx: {name: '*MicrosoftTeams*', type: family}
+    - !appx: {name: '*bing*', type: family}
+    - !appx: {name: '*solitaire*', type: family}
+    - !appx: {name: '*xbox*', type: family}
+    - !appx: {name: '*zune*', type: family}
+    - !appx: {name: '*officehub*', type: family}
+    - !appx: {name: '*skypeapp*', type: family}
+    - !appx: {name: '*getstarted*', type: family}
+    - !appx: {name: '*onenote*', type: family}
+    - !appx: {name: '*yourphone*', type: family}
+    - !appx: {name: '*people*', type: family}
+    - !appx: {name: '*maps*', type: family}
+    - !appx: {name: '*weather*', type: family}
+    - !appx: {name: '*news*', type: family}
+    - !appx: {name: '*messaging*', type: family}
+    - !appx: {name: '*camera*', type: family}
+    - !appx: {name: '*soundrecorder*', type: family}
+    - !appx: {name: '*feedbackhub*', type: family}
+    - !appx: {name: '*windowsalarms*', type: family}
+    - !appx: {name: '*windowscommunicationsapps*', type: family}
+    - !appx: {name: '*windowsmaps*', type: family}
+    - !appx: {name: '*3dviewer*', type: family}
+    - !appx: {name: '*paint3d*', type: family}
+    - !appx: {name: '*mixedreality*', type: family}
+
+    # Necessary to refresh start menu entries etc.
+    - !appx: {name: '*Client.CBS*', operation: clearCache}
+    - !appx: {name: '*StartMenuExperienceHost*', operation: clearCache}
+    - !appx: {name: '*Windows.Search*', operation: clearCache}
